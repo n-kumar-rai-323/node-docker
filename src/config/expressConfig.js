@@ -8,4 +8,7 @@ app.get("/", (req, res, next) => {
     });
 });
 
+app.use(express.json());
+app.use("/api/users", require("../routers/userRouters"));
+
 module.exports = app
